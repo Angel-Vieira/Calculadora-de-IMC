@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="source/css/reset.css">
+    <link rel="stylesheet" href="source/css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <h1>Calculadora de IMC</h1>
+        </div>
+
+        <nav>
+            <input class="checkbox" type="checkbox" id="menu">
+            <label for="menu">
+                <div class="quadrado-menu">
+                    <span class="linha-menu"></span>
+                </div>
+            </label>
+
+            <ul>
+                <li><a href="#">Dicas de saúde</a></li>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Informações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="area-de-calculo">
+    <div class="area-de-inclusao">
+        
+        <h1>Calcule Aqui</h1>
+    
+            <input type="text" placeholder="Digite seu peso" name="peso" class="texto">
+            <input type="text" placeholder="Digite sua altura" name="altura" class="texto">
+            <button class="button" name="button"> Calcular IMC</button>
+    </div>
+    
+    <div class="resultado" id="mostrarIMC">
+    </div>
+</div>
+
+
+    <div class="imagem">
+        <h2>Tabela IMC</h2>
+        <img src="https://santahelenahospital.com.br/wp-content/uploads/2020/06/HSH_Tabela-Obesidade.png" alt="">
+    </div>
+
+    <script src="./javascript/index.js"></script>
+</body>
+</html>

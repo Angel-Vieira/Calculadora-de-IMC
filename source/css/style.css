@@ -1,0 +1,180 @@
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #8BC767;
+}
+
+.logo{
+    display: flex;
+    margin: 10px;
+}
+
+.header .logo::before{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+    background-image: url(../images/unnamed.png);  
+    margin-right: 10px; 
+}
+
+.header{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header nav ul{
+    display: flex;
+    margin-right: 10px;
+}
+
+.header nav ul li a{
+    padding: 10px;
+    transition: 0.3s linear;
+}
+
+.header nav ul li:hover a{
+    background-color: #EC3237;
+    color: aliceblue;
+   
+    border-radius: 10px;
+}
+
+
+label .quadrado-menu{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: none;
+}
+
+label .quadrado-menu .linha-menu{
+      height: 2px;
+      width: 30px;
+      background-color: black;
+      position: absolute;
+      top: 23px;
+      right: 13px;
+      transition: 0.3s ease-in-out;
+}
+
+label .quadrado-menu .linha-menu::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+label .quadrado-menu .linha-menu::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: -10px;
+    transition: 0.3s ease-in-out;
+}
+
+.header input:checked ~ label .quadrado-menu .linha-menu{
+    transform: rotate(45deg);
+   
+}
+
+
+.header input:checked ~ label .quadrado-menu .linha-menu::before{
+    transform: rotate(90deg);
+    top: 0px;
+}
+
+.header input:checked ~ label .quadrado-menu .linha-menu::after{
+    transform: rotate(90deg);
+    top: 0px;
+}
+
+
+.area-de-calculo{
+    background-color: aliceblue;
+    margin-top: 30px;
+    height: 120px;
+    width: 50%;
+    border-radius: 0px 20px 20px 0px;
+
+}
+
+.area-de-calculo .area-de-inclusao{
+    margin-left: 20px;
+}
+
+.area-de-calculo .area-de-inclusao h1{
+    font-size: 25px;
+    margin-block: 10px;
+}
+
+.area-de-calculo .area-de-inclusao input{
+    height: 30px;
+    border: solid 2px #8BC767;
+    border-radius: 18px 60px 18px 60px;
+    text-align: center;
+}
+
+.area-de-calculo .area-de-inclusao button{
+    height: 30px;
+    border: solid 2px #8BC767;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+.button{
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.button:active{
+    background-color: #8BC767;
+    color: aliceblue;
+    
+}
+
+ .area-de-calculo .resultado{
+    margin: 10px;
+    display: inline-block;
+    width: 130%;
+    border-radius: 10px;  
+    padding: 5px;
+}
+
+.imagem{
+    max-width: 645px;
+    min-width: 300px;
+    margin: 0 auto;
+    margin-inline: 20px;
+    background-color: white;
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+    border-radius: 18px; 
+    
+}
+
+.imagem h2{
+    margin-left: 10px;
+    text-align: center;
+    
+}
+
+.imagem img{
+    max-width: 100%;
+    border-radius: 20px;
+}
+
