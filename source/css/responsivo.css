@@ -29,7 +29,7 @@
 
 
 
-@media(max-width:980px){
+@media(max-width:995px){
     .area-de-calculo{
         height: 200px;
         margin: 50px 0px 20px 20px;
@@ -56,7 +56,8 @@
     }
 
     .area-de-calculo .resultado{
-        margin-left: 0px;
+        max-width: 120%;
+        padding-left: 10px;
     }
 
 
@@ -67,6 +68,10 @@
     .button{
         margin: 0px;
     }
+    .imagem{
+        margin-top: 100px;
+    }
+
 }
 
 

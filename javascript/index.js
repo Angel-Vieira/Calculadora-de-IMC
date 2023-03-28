@@ -1,28 +1,29 @@
+function testaImc(imc, valorMenor, valorMaior, texto){
+   if(imc>=valorMenor && imc <= valorMaior){
+      mostrarIMC.innerHTML = `<p> Seu imc é de ${imc}. ${texto} </p>` 
+      mostrarIMC.classList.add('formataçao-de-resultado')
+   }
+}
+
+
 function calculo(pesoDigitado, alturaDigitada){
    let imc = pesoDigitado/(alturaDigitada*alturaDigitada)
-   console.log('imc eh' + imc)
+   console.log('imc eh ' + imc)
 
    let imcAredondado = parseFloat(imc.toFixed(2))
    console.log(imcAredondado)
+
+    testaImc(imcAredondado,0, 18.5, "Abaixo do peso.")
  
-      if(imc < 18.5){
-      mostrarIMC.innerHTML = `<p> Seu imc é de ${imcAredondado}. Você está abaixo do peso.</p>`
-      }
-      if(imc >= 18.5 && imc <= 24.9){
-      mostrarIMC.innerHTML = `<p> Seu imc é de ${imcAredondado}.  Você está com o peso normal.</p>`
-      }
-      if(imc >= 25 && imc <= 29.9){
-      mostrarIMC.innerHTML = `<p> Seu imc é de ${imcAredondado}.  Você está acima do peso. (sobrepeso)</p>`
-      }
-      if(imc >= 30 && imc <= 34.9){
-      mostrarIMC.innerHTML = `<p> Seu imc é de ${imcAredondado}.  Obesidade 1.</p>`
-      }
-      if(imc >= 35 && imc <= 39.9){
-      mostrarIMC.innerHTML = `<p> Seu imc é de ${imcAredondado}.  Obesidade 2.</p>`
-      }
-      if(imc > 40){
-       mostrarIMC.innerHTML = `<p> Seu imc é de ${imcAredondado}.  Obesidade 3.</p>`
-      }     
+    testaImc(imcAredondado,18.5, 24.9, "Peso normal.")
+
+    testaImc(imcAredondado,25, 29.9, "Acima acima do peso. (Sobrepeso)")
+
+    testaImc(imcAredondado,30, 34.9, "Obesidade 1")
+
+    testaImc(imcAredondado,35, 39.9, "Obesidade 2")
+
+    testaImc(imcAredondado,40, 1000, "Obesidade 3")         
 }
 
 

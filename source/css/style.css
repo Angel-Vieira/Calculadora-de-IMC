@@ -8,6 +8,7 @@ body{
 
 .logo{
     display: flex;
+    align-items: center;
     margin: 10px;
 }
 
@@ -36,13 +37,13 @@ body{
 
 .header nav ul li a{
     padding: 10px;
-    transition: 0.3s linear;
+    transition: 0.3s ease-in-out;
+    margin-inline: 10px;
 }
 
 .header nav ul li:hover a{
     background-color: #EC3237;
     color: aliceblue;
-   
     border-radius: 10px;
 }
 
@@ -147,11 +148,11 @@ label .quadrado-menu .linha-menu::after{
 }
 
  .area-de-calculo .resultado{
-    margin: 10px;
+    margin-block: 10px;
     display: inline-block;
-    width: 130%;
+    width: 140%;
     border-radius: 10px;  
-    padding: 5px;
+    padding-left: 20px; 
 }
 
 .imagem{
@@ -161,7 +162,7 @@ label .quadrado-menu .linha-menu::after{
     margin-inline: 20px;
     background-color: white;
     display: flex;
-    margin-top: 70px;
+    margin-top: 30px;
     flex-direction: column;
     border-radius: 18px; 
     
@@ -178,3 +179,20 @@ label .quadrado-menu .linha-menu::after{
     border-radius: 20px;
 }
 
+
+  .formataçao-de-resultado{
+    font-size: 18px;
+    max-width: 100%;
+    background-color: aliceblue;
+    padding: 5px;
+    animation: go-back 1s;
+}
+
+@keyframes go-back {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
