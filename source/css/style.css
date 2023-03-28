@@ -180,13 +180,7 @@ label .quadrado-menu .linha-menu::after{
 }
 
 
-  .formataçao-de-resultado{
-    font-size: 18px;
-    max-width: 100%;
-    background-color: aliceblue;
-    padding: 5px;
-    animation: go-back 1s;
-}
+  
 
 @keyframes go-back {
     0% {
