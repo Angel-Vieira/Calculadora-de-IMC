@@ -1,6 +1,8 @@
 function testaImc(imc, valorMenor, valorMaior, texto){
    if(imc>=valorMenor && imc <= valorMaior){
       mostrarIMC.innerHTML = `<p> Seu imc é de ${imc}. ${texto} </p>` 
+      mostrarIMC.classList.remove('formataçao-de-resultado')
+      mostrarIMC.offsetWidth;
       mostrarIMC.classList.add('formataçao-de-resultado')
    }
 }
